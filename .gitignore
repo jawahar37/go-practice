@@ -23,6 +23,7 @@ go.work.sum
 
 # Project Specific
 learngo
+main
 
 # OS
 .DS_Store
