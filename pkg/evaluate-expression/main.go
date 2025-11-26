@@ -17,6 +17,8 @@ func main() {
 	fmt.Printf("Result: %d\n", result)
 }
 
+// convertStringToExpression returns the numbers and operators as a slice of string tokens
+// "[91 + 82 - 3 + 4]" is returned for "nineonepluseighttwominusthreeplusfour"
 func convertStringToExpression(str string) []string {
 	tokens := map[string]string{
 		"zero":  "0",
@@ -79,6 +81,8 @@ func convertStringToExpression(str string) []string {
 	return result
 }
 
+// evaluateExpression returns the computed value of the expression
+// 174 is returned for [91 + 82 - 3 + 4]
 func evaluateExpression(tokens []string) int {
 	if len(tokens) == 0 {
 		return 0

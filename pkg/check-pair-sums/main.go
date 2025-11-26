@@ -15,8 +15,9 @@ func main() {
 }
 
 func checkPairSums(arr []int, target int) (int, int, bool) {
-	complements := make(map[int]int)
 
+	// use map to store indices of each potential complementary integer encountered so far
+	complements := make(map[int]int)
 	for i, num := range arr {
 		complement := target - num
 		if j, ok := complements[complement]; ok {

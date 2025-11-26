@@ -15,7 +15,10 @@ func main() {
 	}
 }
 
+// findAnagrams returns a 2d slice of strings of words that are grouped by anagram
 func findAnagrams(words []string) ([][]string, bool) {
+
+	// use sorted string of the word as key for the map
 	anagrams := make(map[string][]string)
 	for _, word := range words {
 		sortedWord := sortString(word)
